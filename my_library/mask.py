@@ -1,6 +1,8 @@
 import numpy as np
 import math
-
+import os, sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+from my_library.normalize import my_normalize
 
 def my_get_Gaussian2D_mask(msize, sigma=1):
     y, x = np.mgrid[-msize // 2.0 + 1: msize // 2.0 + 1, -msize // 2.0 + 1: msize // 2.0 + 1]
