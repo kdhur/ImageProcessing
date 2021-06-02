@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 import time
 
+
 def C(w, n=8):
     if w == 0:
         return (1 / n) ** 0.5
@@ -200,8 +201,8 @@ def block2img(blocks, src_shape, n=8):
     dst = np.zeros((h, w))
     cnt = 0
 
-    for i in range(h//n):
-        for j in range(w//n):
+    for i in range(h // n):
+        for j in range(w // n):
             dst[i * n: n + i * n, j * n: j * n + n] = blocks[cnt]
             cnt += 1
 
